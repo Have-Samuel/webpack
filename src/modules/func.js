@@ -44,3 +44,11 @@ const addTask = (form) => {
 };
 
 export { addTask };
+
+
+const icon = document.querySelector('.icon-bin');
+
+icon.addEventListener('submit', () => {
+  icon.classList.add('icon-bin');
+  anotherIcon.style.display = 'block';
+});
