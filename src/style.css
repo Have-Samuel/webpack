@@ -4,14 +4,15 @@ body {
 
 .item-container__title {
   display: flex;
+  justify-content: space-between;
   border: 2px solid #cecece;
-  width: 40%;
+  width: 70%;
   margin-top: 13rem;
   margin-left: 25rem;
   background-color: #f3f3f3;
   padding: 2rem;
 }
 
-.title-text {
+.title {
   font-size: 20px;
 }

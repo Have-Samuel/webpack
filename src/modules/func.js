@@ -1,4 +1,4 @@
-const listContainer = document.querySelector('.list-container__items');
+const listContainer = document.querySelector('.item-container__items');
 
 let tasks = [];
 
