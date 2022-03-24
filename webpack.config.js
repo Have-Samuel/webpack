@@ -15,9 +15,11 @@ const path = require('path');
           path: path.resolve(__dirname, 'dist'),
            clean: true,
            },
-            module: { rules: [ { test: /\.css$/i,
-             use: ['style-loader',
-              'css-loader'],
+            module: {
+              rules: [
+                {
+                  test: /\.css$/i,
+                  use: ['style-loader', 'css-loader'],
             },
           ],
         },

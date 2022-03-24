@@ -1,14 +1,17 @@
-import _ from 'lodash';
-import './style.css';
+import { addTask } from '././modules/func.js';
 
- function component() {
-   const element = document.createElement('div');
+const form = document.querySelector('.list-container__list-content');
 
+addTask(form);
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-   return element;
- }
+const checkbox = document.querySelectorAll('input[type=checkbox]');
 
- document.body.appendChild(component());
+const checkMark = (input) => {
+  input.addEventListener('change', () => {
+    if (input.checked) {
+      input.nextElementSibling.classList.add('checked');
+    } else input.nextElementSibling.classList.remove('checked');
+  });
+};
+
+checkbox.forEach((e) => checkMark(e));
