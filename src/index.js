@@ -1,4 +1,6 @@
+import './style.css';
 import { addTask } from '././modules/func.js';
+
 
 const form = document.querySelector('.item-container__list-content');
 
