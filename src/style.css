@@ -5,9 +5,9 @@ body {
 .list-container__title {
   display: flex;
   border: 2px solid #cecece;
-  /* width: 40%;
+  width: 40%;
   margin-top: 13rem;
-  margin-left: 25rem; */
+  margin-left: 25rem;
   background-color: #f3f3f3;
   padding: 2rem;
 }
