@@ -1,3 +1,17 @@
 body {
   background-color: rgb(75, 73, 72);
 }
+
+.list-container__title {
+  display: flex;
+  border: 2px solid #cecece;
+  /* width: 40%;
+  margin-top: 13rem;
+  margin-left: 25rem; */
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+.title-text {
+  font-size: 20px;
+}
