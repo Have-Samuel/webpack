@@ -2,7 +2,7 @@ body {
   background-color: rgb(75, 73, 72);
 }
 
-.list-container__title {
+.item-container__title {
   display: flex;
   border: 2px solid #cecece;
   width: 40%;
