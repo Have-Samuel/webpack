@@ -1,4 +1,3 @@
-import e from 'express';
 import {
   status, removeTask, updateTask, removecompletedTask
 } from './func.js';
@@ -48,7 +47,10 @@ const selectAtask = () => {
   };
 };
 
+
+
 const clearCompletedTasks = () => {
+  const clearButton = document.querySelector('.item-container__remove-all');
   clearButton.addEventListener('click', () => {
     removecompletedTask();
     window.location.reload();

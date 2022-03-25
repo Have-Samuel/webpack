@@ -12,6 +12,7 @@ const task = {
 };
 
 const displayTask = () => {
+  listContainer.innerHTML = '';
   tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((e) => {
     const li = document.createElement('li');
@@ -39,13 +40,14 @@ const updateIndex = () => {
 
 const addTask = (form) => {
   form.addEventListener('submit', (event) => {
-    task.description = form.elements.list.value;
+    event.preventDefault();
+    task.description = document.querySelector('#item').value;
     task.index = tasks.length;
     tasks.push(task);
     localStorage.setItem('listItem', JSON.stringify(tasks));
-    form.elements.list.value = '';
+    document.querySelector('#item').value = '';
     window.location.reload();
-    event.preventDefault();
+    
   });
 };
 
@@ -62,7 +64,7 @@ const removecompletedTask = () => {
   updateIndex();
 };
 
-const updateTask = (inedx, value) => {
+const updateTask = (index, value) => {
   task[iindex].destination = value;
   window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
