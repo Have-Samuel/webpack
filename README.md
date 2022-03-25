@@ -10,7 +10,7 @@
 - CSS
 - JavaScript
 - Webpack
-- 
+- Git & Github
 
 ## Getting Started
 
