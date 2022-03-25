@@ -1,6 +1,6 @@
 import './style.css';
 import { addTask } from '././modules/func.js';
-
+import { clearCompletedTasks, markTask, selectAtask } from './modules/interact.js';
 
 const form = document.querySelector('.item-container__list-content');
 
@@ -17,3 +17,12 @@ const checkMark = (input) => {
 };
 
 checkbox.forEach((e) => checkMark(e));
+
+
+addTask();
+
+selectAtask();
+
+markTask();
+
+clearCompletedTasks();

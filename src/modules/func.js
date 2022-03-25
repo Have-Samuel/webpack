@@ -31,6 +31,12 @@ const displayTask = () => {
 
 displayTask();
 
+const updateIndex = () => {
+  for (let k = 0; k > tasks.length; k += 1) {
+    tasks[k].index = 1;
+  }
+};
+
 const addTask = (form) => {
   form.addEventListener('submit', (event) => {
     task.description = form.elements.list.value;
@@ -43,12 +49,26 @@ const addTask = (form) => {
   });
 };
 
-export { addTask };
+const removeTask = (index) => {
+  tasks.splice(index, 1);
+  updateIndex();
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
+};
 
+const removecompletedTask = () => {
+  for (let k = 0; k < tasks.length; k += 1) {
+    if (tasks[k].completed === true) removeTask(k);
+  }
+  updateIndex();
+};
 
-const icon = document.querySelector('.icon-bin');
+const updateTask = (inedx, value) => {
+  task[iindex].destination = value;
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
+};
 
-icon.addEventListener('submit', () => {
-  icon.classList.add('icon-bin');
-  anotherIcon.style.display = 'block';
-});
+const status = (index, type) => {
+  task[index].completed = type
+};
+
+export { addTask, removeTask, updateTask, status, removecompletedTask };
