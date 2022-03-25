@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgb(187, 180, 177);
 }
@@ -11,17 +17,12 @@ body {
   background-color: #f3f3f3;
   padding: 1rem;
   margin-right: 22rem;
+  filter: drop-shadow(3px 3px 2px #ccc);
 }
 
 .item-container__title {
   display: flex;
   justify-content: space-between;
-}
-
-.icon-top {
-  font-size: 17px;
-  margin-top: 1rem;
-  margin-right: 12rem;
 }
 
 .title {
@@ -40,6 +41,7 @@ input[type='text'] {
 
 .icon-turn {
   margin-left: 0.5rem;
+  transform: rotate(90deg);
 }
 
 .item-container__items {
@@ -53,11 +55,36 @@ input[type='text'] {
 .list-container__items--item {
   display: flex;
   justify-content: flex-end;
-  gap: 14rem;
+  gap: 26%;
   border: 1px solid grey;
   margin: 0.2rem -2rem;
   padding: 0.4rem;
   align-items: center;
+  filter: drop-shadow(3px 3px 2px #ccc);
+}
+
+.task-name {
+  margin-left: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.task-name:focus {
+  cursor: default;
+}
+
+.icon-delete {
+  position: relative;
+}
+
+.icon-delete::after {
+  content: '\f2ed';
+  position: absolute;
+  left: -50%;
+  width: 100%;
+  height: 100%;
 }
 
 i {
@@ -79,7 +106,19 @@ i {
 
 .item-container__remove-all {
   padding: 1rem;
-  background-color: rgb(248, 244, 244);
-  border: 1px solid gray;
+  background-color: #f8f4f4;
+  border: 1px solid #808080;
   font-size: 16px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.list-highlight {
+  background-color: #ebddc2;
+}
+
+.input-after::after {
+  background-color: #ece2ce;
 }
